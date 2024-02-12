@@ -3,6 +3,7 @@
 hostfile=$1
 portfile=$2
 
+# Check that files exist
 while ! [ -f "$hostfile" ]; do
 	read -p "Enter path to hostfile: " $hostfile
 done
