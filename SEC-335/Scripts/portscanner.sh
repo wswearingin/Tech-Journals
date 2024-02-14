@@ -3,7 +3,7 @@ hostfile=""
 portfile=""
 
 # Get host/port file
-if [! $# -eq 0 ]; then
+if [ ! $# -eq 0 ]; then
 	$hostfile=$1
 	$portfile=$2
 else
