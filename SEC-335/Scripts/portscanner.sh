@@ -1,17 +1,22 @@
 #!/bin/bash
 
-hostfile=$1
-portfile=$2
+# Get host/port files
+hostfile = "hosts.txt"
+portfile = "tcpports.txt"
 
-# Check that files exist
-while [ ! -f $hostfile ]; do
-	read -p "Enter path to hostfile: " $hostfile
-done
-
-while [ ! -f $portfile ]; do
+if [ $2 -eq 0 ]; then
 	read -p "Enter path to portfile: " $portfile
-done
+	
+	if [ $1 -eq 0 ]; then
+		read -p "Enter path to hostfile: " $hostfile
+	else
+		$hostfile = $1
+	fi
+else
+	$portfile = $2
+fi
 
+# Check Ports
 echo "host,port"
 
 
