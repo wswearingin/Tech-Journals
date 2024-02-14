@@ -1,19 +1,17 @@
 #!/bin/bash
-hostfile=""
-portfile=""
 
 # Get host/port file
 if [ ! $# -eq 0 ]; then
-	$hostfile=$1
-	$portfile=$2
+	hostfile=$1
+	portfile=$2
 
-	echo $hostfile $portfile
+	echo "$hostfile,$portfile"
 else
-	read -p "Enter path to hostfile: " $hostfile
-	read -p "Enter path to portfile: " $portfile
+	read -p "Enter path to hostfile: " hostfile
+	read -p "Enter path to portfile: " portfile
 fi
 
-echo $hostfile $portfile
+echo "$hostfile,$portfile"
 # Check Ports
 echo "host,port"
 
