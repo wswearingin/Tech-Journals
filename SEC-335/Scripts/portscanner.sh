@@ -4,11 +4,11 @@ hostfile=$1
 portfile=$2
 
 # Check that files exist
-while ! [ -f $hostfile ]; do
+while [ ! -f $hostfile ]; do
 	read -p "Enter path to hostfile: " $hostfile
 done
 
-while ! [ -f $portfile ]; do
+while [ ! -f $portfile ]; do
 	read -p "Enter path to portfile: " $portfile
 done
 
