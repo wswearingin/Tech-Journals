@@ -10,10 +10,10 @@ if [ $2 -eq 0 ]; then
 	if [ $1 -eq 0 ]; then
 		read -p "Enter path to hostfile: " $hostfile
 	else
-		$hostfile = $1
+		$hostfile=$1
 	fi
 else
-	$portfile = $2
+	$portfile=$2
 fi
 
 # Check Ports
