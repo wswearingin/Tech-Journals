@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Get host/port files
-hostfile = "hosts.txt"
-portfile = "tcpports.txt"
+hostfile="hosts.txt"
+portfile="tcpports.txt"
 
 if [ $2 -eq 0 ]; then
 	read -p "Enter path to portfile: " $portfile
