@@ -10,7 +10,7 @@ echo "host,port"
 
 for i in {1..254}
 do
-    host=$prefix+"."+$i
+    host=$prefix"."$i
     echo $host
     timeout .1 bash -c "echo >/dev/tcp/$host/$port" 2>/dev/null &&
         echo "$host"
