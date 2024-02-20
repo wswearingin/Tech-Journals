@@ -5,9 +5,7 @@
 prefix=$1
 port=$2
 
-# Check Ports
-echo "host,port"
-
+# Check Hosts
 for i in {1..254}
 do
     host=$prefix"."$i
